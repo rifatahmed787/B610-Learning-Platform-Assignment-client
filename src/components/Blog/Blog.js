@@ -17,7 +17,7 @@ const Blog = () => {
                 1.1 what is cors?
               </summary>
               <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
-                Cors stands for Cross-Origin Resource Sharing (CORS).It is a
+                Cors stands for Cross-Origin Resource Sharing (CORS). It is a
                 browser security feature that restricts cross-origin HTTP
                 requests that are initiated from scripts running in the browser.
               </p>
@@ -28,8 +28,13 @@ const Blog = () => {
                 to implement authentication?
               </summary>
               <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
-                Tincidunt ut hac condimentum rhoncus phasellus nostra. Magna
-                porttitor egestas tincidunt neque vehicula potenti.{" "}
+                Firebase allows real-time database connection, which means
+                multiple users can see the changes in the data when the data
+                gets created or edited. Firebase Authentication provides backend
+                services, easy-to-use SDKs, and ready-made UI libraries to
+                authenticate users to your app. It supports authentication using
+                passwords, phone numbers, popular federated identity providers
+                like Google, Facebook and Twitter, and more.
               </p>
             </details>
             <details className="w-full border rounded-lg">
@@ -37,9 +42,10 @@ const Blog = () => {
                 1.3 How does the private route work?
               </summary>
               <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
-                Justo libero tellus integer tincidunt justo semper consequat
-                venenatis aliquet imperdiet. Ultricies urna proin fusce nulla
-                pretium sodales vel magna et massa euismod vulputate sed.{" "}
+                The react private route component renders child components (
+                children ) if the user is logged in. If not logged in the user
+                is redirected to the /login page with the return url passed in
+                the location state property.
               </p>
             </details>
             <details className="w-full border rounded-lg">
@@ -47,9 +53,12 @@ const Blog = () => {
                 1.4 What is Node? How does Node work?
               </summary>
               <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
-                Justo libero tellus integer tincidunt justo semper consequat
-                venenatis aliquet imperdiet. Ultricies urna proin fusce nulla
-                pretium sodales vel magna et massa euismod vulputate sed.{" "}
+                Node allows developers to write JavaScript code that runs
+                directly in a computer process itself instead of in a browser.It
+                is a used as backend service where javascript works on the
+                server-side of the application. This way javascript is used on
+                both frontend and backend. Node. js runs on chrome v8 engine
+                which converts javascript code into machine code.
               </p>
             </details>
           </div>
