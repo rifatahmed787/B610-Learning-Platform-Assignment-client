@@ -1,7 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
+  const { Login, setLoading } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
+
+  const navigate = useNavigate();
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+  };
+
   return (
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
       <div className="w-full p-6 m-auto bg-gray-800 rounded-md shadow-xl lg:max-w-xl">
