@@ -1,20 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CoursesSummuryCard = ({ courses }) => {
   const { details, image_url, _id, title } = courses;
 
   return (
-    <div className="">
-      <div className="grid grid-cols-2 card w-96 bg-base-100 shadow-xl justify-center">
-        <h2 className="card-title">Shoes!</h2>
+    <div>
+      <div className="card w-96 bg-base-100 shadow-xl my-10">
+        <h2 className="card-title my-3">{title}</h2>
         <figure>
-          <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+          <img src={image_url} alt="" />
         </figure>
         <div className="card-body">
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
+          {details.length > 250 ? (
+            <>
+              {details.slice(0, 250) + "..."}
+              <Link to={`/courses/${_id}`} className="text-purple-700">
+                Read more
+              </Link>
+            </>
+          ) : (
+            <> {details}</>
+          )}
         </div>
       </div>
     </div>
