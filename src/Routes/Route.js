@@ -5,6 +5,7 @@ import Blog from "../components/Blog/Blog";
 import Category from "../components/Category/Category";
 import Courses from "../components/Courses/Courses";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import Faq from "../components/Faq/Faq";
 import Home from "../components/Home/Home";
 import Course from "../components/pages/Course";
 import Main from "../layout/Main";
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "/faq",
+        element: <Faq></Faq>,
       },
       {
         path: "/login",

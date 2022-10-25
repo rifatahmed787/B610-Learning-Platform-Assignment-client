@@ -8,7 +8,7 @@ const Course = () => {
   return (
     <div>
       <div className="card w-96 bg-base-100 shadow-xl">
-        <h2 className="card-title my-3">{title}</h2>
+        <h2 className="card-title my-3 mx-auto">{title}</h2>
         <figure>
           <img src={image_url} alt="" />
         </figure>

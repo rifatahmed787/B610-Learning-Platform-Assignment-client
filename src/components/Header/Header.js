@@ -55,6 +55,16 @@ const Header = () => {
             </li>
             <li>
               <Link
+                to="/faq"
+                aria-label="Faq"
+                title="Faq"
+                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+              >
+                FAQ
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/login"
                 aria-label="Login"
                 title="Login"
