@@ -2,11 +2,12 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import CoursesSummuryCard from "../pages/CoursesSummuryCard";
 
-const Home = () => {
-  const allCourses = useLoaderData();
+const Category = () => {
+  const categoryCourses = useLoaderData();
+  console.log(categoryCourses);
   return (
     <div>
-      {allCourses.map((courses) => (
+      {categoryCourses.map((courses) => (
         <CoursesSummuryCard
           key={courses._id}
           courses={courses}
@@ -16,4 +17,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Category;
