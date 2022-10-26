@@ -8,6 +8,7 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Faq from "../components/Faq/Faq";
 import Home from "../components/Home/Home";
 import Course from "../components/pages/Course";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import Main from "../layout/Main";
 
 export const router = createBrowserRouter([
@@ -23,7 +24,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/category/:id",
-        element: <Category></Category>,
+        element: (
+          <PrivateRoute>
+            <Category></Category>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/category/${params.id}`),
       },
@@ -50,7 +55,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/courses/:id",
-        element: <Course></Course>,
+        element: (
+          <PrivateRoute>
+            <Course></Course>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/courses/${params.id}`),
       },

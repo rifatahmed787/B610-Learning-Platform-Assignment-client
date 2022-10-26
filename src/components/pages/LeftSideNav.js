@@ -10,8 +10,8 @@ const LeftSideNav = () => {
       .then((data) => setCategories(data));
   }, []);
   return (
-    <div className="my-10 grid justify-items-center">
-      <h1 className="text-2xl text-orange-400">
+    <div className="my-10 grid justify-items-center bg-sky-500/75 border rounded-lg py-10 mx-5">
+      <h1 className="text-2xl text-black">
         All {categories.length}(six) Categories is here!!
       </h1>
       {categories.map((category) => (
