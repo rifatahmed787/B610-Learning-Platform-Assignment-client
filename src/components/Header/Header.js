@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { FaBeer, FaUser } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -101,6 +102,19 @@ const Header = () => {
                     </Link>
                   </li>
                 </>
+              )}
+            </>
+            <>
+              {user?.photoURL ? (
+                <img
+                  className="rounded-full"
+                  style={{ width: "30px" }}
+                  src={user?.photoURL}
+                  alt=""
+                  title={user?.displayName}
+                />
+              ) : (
+                <FaUser></FaUser>
               )}
             </>
           </ul>
