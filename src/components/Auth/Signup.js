@@ -25,7 +25,7 @@ const Signup = () => {
         handleUpdateProfile(name, photoURL);
       })
       .then((error) => {
-        console.error(error);
+        // console.error(error);
         setError(error.message);
       });
   };
@@ -52,7 +52,7 @@ const Signup = () => {
               htmlFor="name"
               className="block text-base font-semibold text-purple-300"
             >
-              Name
+              Full Name
             </label>
             <input
               type="text"

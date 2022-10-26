@@ -16,7 +16,9 @@ const CoursesSummuryCard = ({ courses }) => {
             <>
               {details.slice(0, 200) + "..."}
               <Link to={`/courses/${_id}`} className="text-purple-700">
-                Read more
+                <button className="btn btn-active btn-accent">
+                  Get premium access
+                </button>
               </Link>
             </>
           ) : (

@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
+import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
-  const { Login, setLoading } = useContext(AuthContext);
+  const { Login } = useContext(AuthContext);
   const [error, setError] = useState("");
   const location = useLocation();
 
@@ -24,10 +25,11 @@ const Login = () => {
         console.log(user);
         setError("");
         form.reset();
+        toast.success("Successfully loged in");
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        console.error(error);
+        setError(error.message);
       });
   };
 
@@ -70,7 +72,7 @@ const Login = () => {
             Forget Password?
           </Link>
           <div className="mt-6">
-            <p className="text-danger">{error}</p>
+            <p className="text-red-600 mb-2">{error}</p>
             <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
               Login
             </button>
