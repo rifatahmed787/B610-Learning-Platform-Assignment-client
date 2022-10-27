@@ -4,7 +4,7 @@ import CoursesSummuryCard from "../pages/CoursesSummuryCard";
 
 const Category = () => {
   const categoryCourses = useLoaderData();
-  console.log(categoryCourses);
+  // console.log(categoryCourses);
   return (
     <div>
       {categoryCourses.map((courses) => (

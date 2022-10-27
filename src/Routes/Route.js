@@ -7,6 +7,7 @@ import Courses from "../components/Courses/Courses";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Faq from "../components/Faq/Faq";
 import Home from "../components/Home/Home";
+import Checkout from "../components/pages/Checkout/Checkout";
 import Course from "../components/pages/Course";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import Main from "../layout/Main";
@@ -25,11 +26,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/category/:id",
-        element: (
-          <PrivateRoute>
-            <Category></Category>
-          </PrivateRoute>
-        ),
+        element: <Category></Category>,
         loader: ({ params }) =>
           fetch(
             ` https://react-assignment-three-server.vercel.app/category/${params.id}`
@@ -59,15 +56,21 @@ export const router = createBrowserRouter([
       },
       {
         path: "/courses/:id",
-        element: (
-          <PrivateRoute>
-            <Course></Course>
-          </PrivateRoute>
-        ),
+        element: <Course></Course>,
         loader: ({ params }) =>
           fetch(
             ` https://react-assignment-three-server.vercel.app/courses/${params.id}`
           ),
+      },
+      {
+        path: "/checkout",
+        element: (
+          <PrivateRoute>
+            <Checkout></Checkout>
+          </PrivateRoute>
+        ),
+        loader: () =>
+          fetch(" https://react-assignment-three-server.vercel.app/courses"),
       },
     ],
   },
