@@ -1,12 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import { FaBeer, FaUser } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const { user, LogOut } = useContext(AuthContext);
+  // const { theme, toggleTheme } = useContext(ThemeContext);
 
   const handleLogOut = () => {
     LogOut()
@@ -114,8 +115,11 @@ const Header = () => {
                   title={user?.displayName}
                 />
               ) : (
-                <FaUser></FaUser>
+                <FaUser className="text-white"></FaUser>
               )}
+            </>
+            <>
+              <input type="checkbox" className="toggle" />
             </>
           </ul>
           <div className="lg:hidden">

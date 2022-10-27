@@ -20,7 +20,8 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/courses"),
+        loader: () =>
+          fetch(" https://react-assignment-three-server.vercel.app/courses"),
       },
       {
         path: "/category/:id",
@@ -30,7 +31,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/category/${params.id}`),
+          fetch(
+            ` https://react-assignment-three-server.vercel.app/category/${params.id}`
+          ),
       },
       {
         path: "/blog",
@@ -51,7 +54,8 @@ export const router = createBrowserRouter([
       {
         path: "/courses",
         element: <Courses></Courses>,
-        loader: () => fetch("http://localhost:5000/courses"),
+        loader: () =>
+          fetch(" https://react-assignment-three-server.vercel.app/courses"),
       },
       {
         path: "/courses/:id",
@@ -61,7 +65,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/courses/${params.id}`),
+          fetch(
+            ` https://react-assignment-three-server.vercel.app/courses/${params.id}`
+          ),
       },
     ],
   },
