@@ -1,13 +1,24 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { FaUser } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [theme, setTheme] = useState("light");
   const { user, LogOut } = useContext(AuthContext);
-  // const { theme, toggleTheme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const themeToggle = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   const handleLogOut = () => {
     LogOut()
@@ -16,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-gray-900">
+    <div className="bg-gray-900 ">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
           <Link
@@ -119,7 +130,13 @@ const Header = () => {
               )}
             </>
             <>
-              <input type="checkbox" className="toggle" />
+              <div className="">
+                <input
+                  onClick={themeToggle}
+                  type="checkbox"
+                  className="toggle"
+                />
+              </div>
             </>
           </ul>
           <div className="lg:hidden">
