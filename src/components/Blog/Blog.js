@@ -1,6 +1,8 @@
 import React from "react";
+import TitleHooks from "../../TitleHooks/TitleHooks";
 
 const Blog = () => {
+  TitleHooks("Blog");
   return (
     <div>
       <section className="dark:bg-gray-800 dark:text-gray-100">

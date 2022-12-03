@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import TitleHooks from "../../TitleHooks/TitleHooks";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Signup = () => {
+  TitleHooks("Sign up");
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const [error, setError] = useState("");
 

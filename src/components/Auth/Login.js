@@ -2,9 +2,11 @@ import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import TitleHooks from "../../TitleHooks/TitleHooks";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
+  TitleHooks("Log in");
   const { Login, GoogleProvider, GithubProvider } = useContext(AuthContext);
   const [error, setError] = useState("");
   const location = useLocation();
