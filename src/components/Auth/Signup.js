@@ -43,7 +43,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="relative flex flex-col justify-center my-10 min-h-screen overflow-hidden">
+    <div className="relative flex flex-col justify-center py-10 min-h-screen overflow-hidden">
       <div className="w-full p-6 m-auto bg-gray-800 rounded-md shadow-xl lg:max-w-xl">
         <h1 className="text-3xl font-semibold text-center text-purple-500 uppercase">
           Sign in

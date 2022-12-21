@@ -1,0 +1,19 @@
+@media only screen and (max-width: 640px) {
+   .pdf-download{
+     margin: auto;
+     padding-bottom: 40px;
+   }
+   .card-align{
+    width: 350px;
+   }
+}
+
+@media only screen and (min-width: 768px) { 
+    .pdf-download{
+        padding-bottom: 40px;
+    }
+
+     .card-align{
+        width: 700px;
+       }
+ }

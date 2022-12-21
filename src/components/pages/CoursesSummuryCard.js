@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./CoursesSummuryCard.css";
 
 const CoursesSummuryCard = ({ courses }) => {
   const { details, image_url, _id, title } = courses;
 
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl my-10">
+      <div className="card h-full bg-base-100 shadow-xl mx-auto my-10 card-margin">
         <h2 className="card-title my-3 mx-auto">{title}</h2>
         <figure>
           <img src={image_url} alt="" />

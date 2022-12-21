@@ -9,7 +9,7 @@ const Main = () => {
     <div>
       <Header></Header>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="lg:grid grid-cols-3 gap-4">
         <div className="col-span-1 hidden lg:block">
           <LeftSideNav></LeftSideNav>
         </div>

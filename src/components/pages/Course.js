@@ -9,6 +9,7 @@ import {
   Text,
   StyleSheet,
 } from "@react-pdf/renderer";
+import "./Course.css";
 
 const styles = StyleSheet.create({
   page: {
@@ -52,8 +53,8 @@ const Course = () => {
       <div className="mt-3 text-center">
         <Link></Link>
       </div>
-      <div className="flex flex-row">
-        <div className="card w-96 bg-base-100 my-5 shadow-xl">
+      <div className="lg:flex flex-row">
+        <div className="card lg:w-full bg-base-100 my-5 shadow-xl mx-auto card-align">
           <h2 className="card-title my-3 mx-auto">{title}</h2>
           <figure>
             <img src={image_url} alt="" />
@@ -68,7 +69,7 @@ const Course = () => {
           </div>
         </div>
 
-        <div>
+        <div className="pdf-download">
           <PDFDownloadLink document={<MyDoc />} fileName="coursedetail.pdf">
             <div className=" mt-10 ml-5 my-auto mx-auto">
               <h1 className="text-xl text-orange-500 ">
